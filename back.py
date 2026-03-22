@@ -11,8 +11,8 @@ def printer(cycle_result, perm_length):
     print(f'\n\nЧисло циклов: {len(cycle_result)}')
 
     without_one_cycles = [x for x in cycle_result if len(x) > 1]
-    #находим знак: (-1)^(n-k), где k - число циклов (одоноциклы не считаются), а n - длина перестановки
-    sign = (-1)**(perm_length - len(without_one_cycles))  
+    #находим знак: (-1)^(n-k), где k - число циклов,  а n - длина перестановки
+    sign = (-1)**(perm_length - len(cycle_result))  
     if sign == 1:
         print('Знак перестановки: +1. Перестановка чётная.')
     elif sign == -1:
